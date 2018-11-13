@@ -16,7 +16,7 @@
     xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var obj = JSON.parse(this.responseText);
-        document.getElementById("vaixells").innerHTML = obj.name;
+        document.getElementById("vaixells").innerHTML = obj;
     }
 };
 xmlhttp.open("GET", "Vaixell.php", true);
