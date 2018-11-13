@@ -17,11 +17,7 @@
     if (this.readyState == 4 && this.status == 200) {
         var obj = JSON.parse(this.responseText);
         for(x in obj){
-        document.getElementById("vaixells").innerHTML = obj.matricula;
-        document.getElementById("vaixells").innerHTML = obj.calat;
-        document.getElementById("vaixells").innerHTML = obj.eslora;
-        document.getElementById("vaixells").innerHTML = obj.maniga;
-        document.getElementById("vaixells").innerHTML = obj.nom;
+        document.getElementById("vaixells").innerHTML = obj[x] + "<br>";
         }
     }
 };
